@@ -1,7 +1,7 @@
 import { Pie, PieChart, ResponsiveContainer, Legend } from "recharts";
 import "./PieChart.less";
 
-const Chart = () => {
+const PieChartt = () => {
     const data = [
         { name: "Jeans", value: 400, fill: "#a855f7" },
         { name: "Jackets", value: 300, fill: "#ff5858" },
@@ -25,4 +25,4 @@ const Chart = () => {
     );
 };
 
-export default Chart;
+export default PieChartt;

@@ -1,5 +1,9 @@
 import { React, useState } from "react";
-import { Home, User, Settings } from "react-feather";
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import HomeWorkIcon from '@mui/icons-material/HomeWork';
+import GroupIcon from '@mui/icons-material/Group';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import SettingsIcon from '@mui/icons-material/Settings';
 import SidebarItem from "./SidebarItem";
 
 const Sidebar = () => {
@@ -10,20 +14,30 @@ const Sidebar = () => {
   };
 
   const items = {
-    home: {
-      title: "Home",
+    overview: {
+      title: "Overview",
       path: "/",
-      icon: <Home size={28} />,
+      icon: <DashboardIcon size={28} />,
     },
-    profile: {
-      title: "Profile",
-      path: "/profile",
-      icon: <User size={28} />,
+    departments: {
+      title: "Departments",
+      path: "/departments",
+      icon: <HomeWorkIcon size={28} />,
+    },
+    team: {
+      title: "Team",
+      path: "/team",
+      icon: <GroupIcon size={28} />,
+    },
+    projects: {
+      title: "Projects",
+      path: "/projects",
+      icon: <AccountTreeIcon size={28} />,
     },
     settings: {
       title: "Settings",
       path: "/settings",
-      icon: <Settings size={26} />,
+      icon: <SettingsIcon size={28} />,
     },
   };
 
@@ -38,8 +52,10 @@ const Sidebar = () => {
         Sidebar
       </div>
       <div className="pt-3 w-full">
-        <SidebarItem {...items.home} />
-        <SidebarItem {...items.profile} />
+        <SidebarItem {...items.overview} />
+        <SidebarItem {...items.departments} />
+        <SidebarItem {...items.team} />
+        <SidebarItem {...items.projects} />
         <SidebarItem {...items.settings} />
       </div>
     </div>

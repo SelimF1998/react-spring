@@ -7,7 +7,7 @@ const SidebarItem = ({ title, path, icon }) => {
             to={ path }
             className="flex justify-center lg:justify-start lg:pl-8 py-4 hover:bg-white/5 cursor-pointer rounded-md select-none text-gray-400"
         >
-            {icon}
+            <div>{icon}</div>
             <div className="ml-3 text-xl font-bold hidden lg:block text-gray-400">
                 {title}
             </div>
