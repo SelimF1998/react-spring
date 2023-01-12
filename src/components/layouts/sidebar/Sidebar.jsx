@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { Home, Settings, User } from "react-feather";
+import { Home, User, Settings } from "react-feather";
 import SidebarItem from "./SidebarItem";
 
 const Sidebar = () => {
