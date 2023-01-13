@@ -3,6 +3,7 @@ import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
 import EuroIcon from "@mui/icons-material/Euro";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import CurrencyYenIcon from '@mui/icons-material/CurrencyYen';
+import CurrencyPoundIcon from '@mui/icons-material/CurrencyPound';
 
 import OverviewCard from "../../components/ui/card/OverviewCard.jsx";
 import LineChartCard from "../../components/ui/card/LineChartCard.jsx";
@@ -34,39 +35,20 @@ const Overview = () => {
       percentage: "50% this week",
       color: "#decb3a",
     },
+    {
+      icon: <CurrencyPoundIcon />,
+      value: "700.36",
+      percentage: "65% this week",
+      color: "#e88113",
+    },
   ];
 
-  const activities = [
-    {
-      icon: <CurrencyBitcoinIcon />,
-      time: "10:00:25 AM",
-      value: "+1025.0",
-      state: "completed",
-    },
-    {
-      icon: <AttachMoneyIcon />,
-      time: "12:56:10 AM",
-      value: "-200.43",
-      state: "completed",
-    },
-    {
-      icon: <EuroIcon />,
-      time: "09:12:25 PM",
-      value: "+625.25",
-      state: "completed",
-    },
-    {
-      icon: <CurrencyYenIcon />,
-      time: "11:30:11 AM",
-      value: "-600.40",
-      state: "completed",
-    },
-  ]
+  
 
   return (
     <div className="overview">
       <h1 className="px-6 py-6 text-gray-300 text-3xl font-extrabold">Overview</h1>
-      <div className="flex gap-5 justify-center ">
+      <div className="flex gap-5 px-6 w-full ">
         {cards.map((card, index) => {
           return <OverviewCard card={card} index={index} />;
         })}
@@ -76,14 +58,19 @@ const Overview = () => {
           Market Overview
         </h1>
       </div>
-      <div className="flex gap-5 justify-center">
-        <div className="linechart">
+      <div className="flex flex-col gap-5 lg:flex-row px-6">
+        <div className="linechart w-full">
           <LineChartCard />
         </div>
-        <div className="piechart">
+        <div className="piechart w-full">
           <PieChartCard />
         </div>
       </div> 
+      <div className="mt-5">
+        <h1 className="px-6 py-6 text-gray-300 text-3xl font-extrabold">
+          Activities
+        </h1>
+      </div>
     </div>
   );
 };

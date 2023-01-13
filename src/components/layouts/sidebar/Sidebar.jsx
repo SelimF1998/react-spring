@@ -19,15 +19,16 @@ const Sidebar = () => {
       path: "/",
       icon: <DashboardIcon size={28} />,
     },
+    users : {
+      title: "Users",
+      path: "/users",
+      icon: <GroupIcon size={28} />
+
+    },
     departments: {
       title: "Departments",
       path: "/departments",
       icon: <HomeWorkIcon size={28} />,
-    },
-    team: {
-      title: "Team",
-      path: "/team",
-      icon: <GroupIcon size={28} />,
     },
     projects: {
       title: "Projects",
@@ -53,8 +54,8 @@ const Sidebar = () => {
       </div>
       <div className="pt-3 w-full">
         <SidebarItem {...items.overview} />
+        <SidebarItem {...items.users} />
         <SidebarItem {...items.departments} />
-        <SidebarItem {...items.team} />
         <SidebarItem {...items.projects} />
         <SidebarItem {...items.settings} />
       </div>
