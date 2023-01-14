@@ -12,8 +12,8 @@ const OverviewCard = ({card, index}) => {
     >
       <div className="card-body">
         <h2 className="card-title text-gray-50 ">{card.icon}</h2>
-        <h2 className="text-gray-50 font-bold text-3xl">{card.value}</h2>
-        <h2 className="text-gray-50 font-bold">{card.percentage}</h2>
+        <h2 className="text-gray-50 font-bold text-3xl ml-1">{card.value}</h2>
+        <h2 className="text-gray-50 font-bold ml-1">{card.percentage}</h2>
       </div>
     </div>
   );

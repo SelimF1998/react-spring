@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ModeEditIcon from "@mui/icons-material/ModeEdit";
+import DeleteIcon from "@mui/icons-material/Delete";
+import AddIcon from "@mui/icons-material/Add";
+import UsersModal from "./UsersModal";
 
 const Users = () => {
+  
+
   return (
     <div className="users">
       <h1 className="px-6 py-6 text-gray-300 text-3xl font-extrabold">Users</h1>
+      <div
+        className="button mt-5 flex justify-end mr-6">
+        <label htmlFor="my-modal" className="btn">Add User<span className="ml-1">
+          <AddIcon />
+          </span></label>
+      </div>
       <div className="mt-5">
         <div className="overflow-x-auto w-auto px-6">
           <table className="table w-full">
@@ -298,6 +310,25 @@ const Users = () => {
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+      <div>
+        <input type="checkbox" id="my-modal" className="modal-toggle" />
+        <div className="modal">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg">
+              Congratulations random Internet user!
+            </h3>
+            <p className="py-4">
+              You've been selected for a chance to get one year of subscription
+              to use Wikipedia for free!
+            </p>
+            <div className="modal-action">
+              <label htmlFor="my-modal" className="btn">
+                Yay!
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </div>

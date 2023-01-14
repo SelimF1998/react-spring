@@ -12,7 +12,7 @@ import PieChartCard from "../../components/ui/card/PieChartCard.jsx";
 const Overview = () => {
   const cards = [
     {
-      icon: <CurrencyBitcoinIcon />,
+      icon: <CurrencyBitcoinIcon sx={{ fontSize: 40 }} />,
       value: "1200",
       percentage: "35% this week",
       color: "#12b03c",
@@ -43,14 +43,12 @@ const Overview = () => {
     },
   ];
 
-  
-
   return (
     <div className="overview">
       <h1 className="px-6 py-6 text-gray-300 text-3xl font-extrabold">Overview</h1>
       <div className="flex gap-5 px-6 w-full ">
         {cards.map((card, index) => {
-          return <OverviewCard card={card} index={index} />;
+          return <OverviewCard key={index} card={card} index={index} />;
         })}
       </div>
       <div className="mt-5">
